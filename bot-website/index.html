@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBot — Главная</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <span class="dot"></span>
+    <span class="logo-text">studybot</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Главная</a></li>
+    <li><a href="about.html">О проекте</a></li>
+    <li><a href="team.html">Участники</a></li>
+    <li><a href="journal.html">Журнал</a></li>
+    <li><a href="resources.html">Ресурсы</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">Проектная практика · 2026</div>
+  <h1>
+    Telegram-бот<br>
+    для <span class="accent-word">студентов</span>
+  </h1>
+  <p class="hero-desc">
+    StudyBot — умный помощник, который помогает учиться эффективнее:
+    мотивирует, ведёт таймер Помодоро, хранит заметки и помогает
+    с расчётами прямо в Telegram.
+  </p>
+  <div class="hero-btns">
+    <a href="about.html" class="btn btn-primary">Узнать больше →</a>
+    <a href="resources.html" class="btn btn-outline">Документация</a>
+  </div>
+</section>
+
+<div class="page-wrap" style="padding-top: 0;">
+
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Команд</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">~500</div>
+      <div class="stat-label">Строк кода</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">Python</div>
+      <div class="stat-label">Язык</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Онлайн</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Возможности</div>
+  <h2 class="section-title">Что умеет <em>StudyBot</em></h2>
+  <p class="section-desc">
+    Восемь функций, которые делают учёбу чуть легче и приятнее каждый день.
+  </p>
+
+  <div class="cards-grid">
+    <div class="card">
+      <span class="card-icon">⏱</span>
+      <h3>Таймер Помодоро</h3>
+      <p>Живой счётчик в Telegram с прогресс-баром, кнопкой отмены и автоматическим переходом на отдых.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">💪</span>
+      <h3>Мотивация</h3>
+      <p>Случайные мотивирующие цитаты по запросу. Для тех, кто застрял и нуждается в пинке.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔢</span>
+      <h3>Конвертер единиц</h3>
+      <p>Длина, масса, время, температура. Поддержка русских и английских названий.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📝</span>
+      <h3>Заметки</h3>
+      <p>Быстрое сохранение мыслей, удаление через инлайн-кнопки, всё хранится между сессиями.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📅</span>
+      <h3>Расписание</h3>
+      <p>Простое добавление дел в формате «9:00 Физика». Сортировка по времени автоматически.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🎲</span>
+      <h3>Помощник выбора</h3>
+      <p>Не можешь решить, что поесть? Закинь варианты — бот выберет случайно за тебя.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📊</span>
+      <h3>Статистика</h3>
+      <p>Сколько помидоров завершил, сколько отменил, сколько заметок и дел в расписании.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">💾</span>
+      <h3>Постоянное хранилище</h3>
+      <p>Все данные пользователя сохраняются в JSON и не теряются после перезапуска бота.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Как запустить</div>
+  <h2 class="section-title">Быстрый <em>старт</em></h2>
+
+  <ol class="steps">
+    <li>
+      <div>
+        <strong>Установи Python 3</strong>
+        <p>Скачай с python.org. При установке отметь галочку «Add to PATH».</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Установи зависимости</strong>
+        <p>В командной строке: <code>pip install pyTelegramBotAPI python-dotenv</code></p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Получи токен у @BotFather</strong>
+        <p>Напиши <code>/newbot</code> в Telegram — получишь уникальный API-токен.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Создай файл .env</strong>
+        <p>Положи туда <code>BOT_TOKEN=твой_токен</code>. Так токен не попадёт на GitHub.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Запусти бот</strong>
+        <p>Выполни в терминале <code>python bot.py</code> — и бот в эфире.</p>
+      </div>
+    </li>
+  </ol>
+
+  <div class="code-block">$ pip install pyTelegramBotAPI python-dotenv<br>$ python bot.py<br><span style="color: var(--muted2)">✅ Бот запущен. Ctrl+C для остановки.</span></div>
+
+</div>
+
+<footer>
+  © 2026 STUDYBOT · Кубирка Егор · группа 251-332 · сделано с <span class="heart">♥</span> на HTML/CSS
+</footer>
+
+</body>
+</html>

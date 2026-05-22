@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBot — О проекте</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <span class="dot"></span>
+    <span class="logo-text">studybot</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="about.html" class="active">О проекте</a></li>
+    <li><a href="team.html">Участники</a></li>
+    <li><a href="journal.html">Журнал</a></li>
+    <li><a href="resources.html">Ресурсы</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero-tag">О проекте</div>
+  <h1 class="section-title" style="font-size: clamp(2.4rem, 6vw, 3.8rem); margin-bottom: 1.25rem;">
+    Что такое <em>StudyBot</em>?
+  </h1>
+  <p class="section-desc" style="font-size: 1.08rem;">
+    StudyBot — индивидуальный учебный проект в рамках проектной практики
+    первого курса. Цель — изучить технологию Telegram-ботов с нуля
+    и реализовать полноценный рабочий инструмент для студентов.
+  </p>
+
+  <div class="quote">
+    «Лучший способ изучить технологию — построить с её помощью что-то
+    полезное для самого себя.»
+    <span class="quote-author">— Принцип проекта</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Проблема</div>
+  <h2 class="section-title">Зачем это <em>нужно</em></h2>
+
+  <div class="cards-grid" style="margin-top: 1.5rem;">
+    <div class="card" style="border-left: 3px solid #e05a5a;">
+      <span class="card-icon">😩</span>
+      <h3>Проблема</h3>
+      <p>Студенты теряют концентрацию, забывают делать перерывы и не имеют
+      удобного инструмента для быстрых вычислений и заметок прямо в мессенджере.</p>
+    </div>
+    <div class="card" style="border-left: 3px solid var(--accent3);">
+      <span class="card-icon">🚀</span>
+      <h3>Решение</h3>
+      <p>Telegram-бот, который всегда под рукой: мотивирует, ведёт таймеры,
+      хранит заметки и помогает с конвертациями. Один интерфейс — много функций.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Технологии</div>
+  <h2 class="section-title">Стек <em>проекта</em></h2>
+
+  <div class="cards-grid" style="margin-top: 1.5rem;">
+    <div class="card">
+      <span class="card-icon">🐍</span>
+      <h3>Python 3</h3>
+      <p>Основной язык разработки. Простой синтаксис, огромная экосистема библиотек.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📦</span>
+      <h3>pyTelegramBotAPI</h3>
+      <p>Библиотека для работы с Telegram Bot API. Декораторный синтаксис, инлайн-кнопки.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔐</span>
+      <h3>python-dotenv</h3>
+      <p>Хранение секретных токенов в файле .env вне репозитория.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">💾</span>
+      <h3>JSON</h3>
+      <p>Постоянное хранилище заметок, расписания и статистики пользователей.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🌐</span>
+      <h3>HTML & CSS</h3>
+      <p>Сайт документации создан на чистом HTML и CSS, без фреймворков и сборщиков.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🗂</span>
+      <h3>Git & GitHub</h3>
+      <p>Управление версиями. Все изменения фиксируются осмысленными коммитами.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Архитектура</div>
+  <h2 class="section-title">Как это <em>работает</em></h2>
+
+  <div class="arch-box">
+    <div class="arch-flow">
+      <div class="arch-node">
+        <div class="arch-icon">👤</div>
+        <div class="arch-label">Пользователь</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-node" style="border-color: rgba(47,255,210,0.3);">
+        <div class="arch-icon">✈️</div>
+        <div class="arch-label" style="color: var(--accent3);">Telegram API</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-node" style="border-color: rgba(123,110,246,0.4);">
+        <div class="arch-icon">🤖</div>
+        <div class="arch-label" style="color: var(--accent2);">StudyBot</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-node">
+        <div class="arch-icon">💬</div>
+        <div class="arch-label">Ответ</div>
+      </div>
+    </div>
+    <p class="arch-caption">
+      Пользователь отправляет команду → Telegram передаёт её на сервер →
+      Python-скрипт обрабатывает запрос → ответ возвращается обратно
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Цели</div>
+  <h2 class="section-title">Что было <em>изучено</em></h2>
+
+  <ol class="steps">
+    <li><div><strong>Работа с API</strong><p>Принципы REST API, формат JSON, методы Telegram Bot API.</p></div></li>
+    <li><div><strong>Python-разработка</strong><p>Декораторы, многопоточность, работа с файлами, обработка исключений.</p></div></li>
+    <li><div><strong>Безопасность</strong><p>Хранение секретов через переменные окружения и .gitignore.</p></div></li>
+    <li><div><strong>Работа с Git</strong><p>Создание репозитория, коммиты, ветки, пуш на GitHub.</p></div></li>
+    <li><div><strong>HTML/CSS вёрстка</strong><p>Многостраничный сайт без фреймворков, адаптивный дизайн, типографика.</p></div></li>
+  </ol>
+
+</div>
+
+<footer>
+  © 2026 STUDYBOT · Кубирка Егор · группа 251-332 · сделано с <span class="heart">♥</span> на HTML/CSS
+</footer>
+
+</body>
+</html>

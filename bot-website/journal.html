@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyBot — Журнал</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <span class="dot"></span>
+    <span class="logo-text">studybot</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="about.html">О проекте</a></li>
+    <li><a href="team.html">Участники</a></li>
+    <li><a href="journal.html" class="active">Журнал</a></li>
+    <li><a href="resources.html">Ресурсы</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero-tag">Журнал прогресса</div>
+  <h1 class="section-title" style="font-size: clamp(2.4rem, 6vw, 3.8rem); margin-bottom: 1rem;">
+    Хронология <em>работы</em>
+  </h1>
+  <p class="section-desc">
+    Заметки о том, как развивался проект — от первой идеи до готового
+    бота с документацией. Каждый этап — отдельная запись.
+  </p>
+
+  <div class="divider"></div>
+
+  <article class="post-card">
+    <div class="post-meta">
+      <span class="post-date">→ Запись #06</span>
+      <span class="post-tag">Итог</span>
+    </div>
+    <h2>Все этапы проекта — от старта до финала</h2>
+    <p>
+      Сводная хронология задач, выполненных в ходе практики. Весь проект
+      реализован индивидуально.
+    </p>
+    <ul>
+      <li>Изучение технологии Telegram Bot API (~6 ч)</li>
+      <li>Регистрация бота через @BotFather (~30 мин)</li>
+      <li>Разработка базовой логики на Python: /start, /help, /motivation, /pomodoro, /convert (~8 ч)</li>
+      <li>Расширение функционала: живой таймер с отменой, заметки, расписание, статистика, JSON-хранилище (~10 ч)</li>
+      <li>Защита токена через .env и .gitignore (~1 ч)</li>
+      <li>Дизайн и вёрстка пятистраничного сайта на HTML/CSS (~8 ч)</li>
+      <li>Написание документации в Markdown (~4 ч)</li>
+      <li>Настройка Git-репозитория и публикация на GitHub (~2 ч)</li>
+      <li>Подготовка отчёта по практике (~4 ч)</li>
+    </ul>
+  </article>
+
+  <article class="post-card">
+    <div class="post-meta">
+      <span class="post-date">→ Запись #05</span>
+      <span class="post-tag">Документация</span>
+    </div>
+    <h2>Сайт-документация готов</h2>
+    <p>
+      Завершил вёрстку многостраничного сайта на чистом HTML и CSS.
+      Сайт включает пять страниц: главную с описанием функций,
+      страницу о проекте с архитектурой, страницу участников, журнал
+      прогресса и список ресурсов. В дизайне использованы шрифты
+      Instrument Serif для заголовков и JetBrains Mono для технических
+      элементов. Тёмная тема, плавные анимации, адаптивная вёрстка под
+      мобильные устройства.
+    </p>
+    <ul>
+      <li>5 HTML-страниц, единый style.css</li>
+      <li>Анимации появления и hover-эффекты</li>
+      <li>Адаптивный дизайн для экранов до 600px</li>
+    </ul>
+  </article>
+
+  <article class="post-card">
+    <div class="post-meta">
+      <span class="post-date">→ Запись #04</span>
+      <span class="post-tag">Безопасность</span>
+    </div>
+    <h2>Защита токена через .env</h2>
+    <p>
+      Узнал, что хранить токен прямо в коде — серьёзная уязвимость.
+      Установил библиотеку python-dotenv, вынес BOT_TOKEN в отдельный
+      файл .env, который добавил в .gitignore. Старый токен пришлось
+      перевыпустить через @BotFather, так как он успел засветиться.
+      Теперь в репозитории лежит только .env.example как шаблон без
+      реальных секретов.
+    </p>
+  </article>
+
+  <article class="post-card">
+    <div class="post-meta">
+      <span class="post-date">→ Запись #03</span>
+      <span class="post-tag">Расширение функционала</span>
+    </div>
+    <h2>Большое обновление — Помодоро 2.0 и новые команды</h2>
+    <p>
+      Базовый бот оказался слишком простым: у таймера не было счётчика,
+      нельзя было отменить его после запуска. Полностью переписал
+      Помодоро — теперь сообщение редактируется каждые 30 секунд,
+      показывает оставшееся время и прогресс-бар, а под ним инлайн-кнопка
+      «Отменить». Добавил функции:
+    </p>
+    <ul>
+      <li>Заметки с возможностью удаления через кнопки</li>
+      <li>Расписание на день в формате «9:00 Физика»</li>
+      <li>Расширенный конвертер: длина, масса, время, температура</li>
+      <li>Команду /choose для случайного выбора из вариантов</li>
+      <li>Статистику завершённых помидоров</li>
+      <li>Постоянное хранилище данных в JSON</li>
+    </ul>
+  </article>
+
+  <article class="post-card">
+    <div class="post-meta">
+      <span class="post-date">→ Запись #02</span>
+      <span class="post-tag">Первая версия</span>
+    </div>
+    <h2>Базовый бот работает</h2>
+    <p>
+      Установил Python и библиотеку pyTelegramBotAPI. Зарегистрировал
+      бота через @BotFather, получил токен. Написал первую версию
+      bot.py с четырьмя командами: /start, /help, /motivation
+      (случайная цитата) и /pomodoro (таймер на 25 минут через time.sleep
+      в отдельном потоке). Также добавил конвертер единиц для километров,
+      килограммов и часов. Бот успешно отвечает на сообщения в Telegram.
+    </p>
+  </article>
+
+  <article class="post-card">
+    <div class="post-meta">
+      <span class="post-date">→ Запись #01</span>
+      <span class="post-tag">Старт проекта</span>
+    </div>
+    <h2>Выбор темы и подготовка</h2>
+    <p>
+      Изучил задание проектной практики. По варианту 2 нужно реализовать
+      одну из технологий из репозитория build-your-own-x.
+      Из вариантов остановился на Telegram-боте — это интересно, полезно
+      и подходит для индивидуальной работы. Прочитал документацию
+      Telegram Bot API, посмотрел несколько туториалов, сформировал
+      идею: помощник для студентов с таймером, конвертером и мотивацией.
+      Создал репозиторий на GitHub из шаблона курса.
+    </p>
+  </article>
+
+</div>
+
+<footer>
+  © 2026 STUDYBOT · Кубирка Егор · группа 251-332 · сделано с <span class="heart">♥</span> на HTML/CSS
+</footer>
+
+</body>
+</html>
